@@ -22,4 +22,9 @@ body {
   p, li, dd, dt, address {
     line-height: 1.5;
   }
+
+  abbr {
+    text-decoration: underline dotted; /* Adds a dotted underline */
+    cursor: help; /* Changes cursor to help icon */
+  }
   
