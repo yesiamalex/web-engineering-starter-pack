@@ -15,7 +15,9 @@
 }
 
 .span-row {
-    grid-row: auto / span 2;
+    /* grid-row: auto / span 2; */
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
 .span-col {
