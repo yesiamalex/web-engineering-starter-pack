@@ -27,24 +27,64 @@ header {
 }
 
 .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right */
     font-size: 14px;
+    padding-bottom: 15px;
+}
+
+.user-info .counters {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.user-info .counters span {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation Bar */
 .navbar {
     background-color: #e0e0e0;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    padding: 10px 20px;
+    padding-right: 15px; /* Add padding for all sides */
+    padding-top: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Align items to the sides */
+    align-items: center; /* Center items vertically */
     position: relative;
     z-index: 1;
+    padding-left: 310px; /* Align with the start of the newsfeed */
+    padding-bottom: 0px;
+    box-sizing: border-box; /* Include padding within the element's width */
+}
+
+.navbar .second-nav {
+    padding: 0; /* Remove default padding */
+    align-self: flex-end; /* Align to the bottom of the container */
+    padding-bottom: -500px;
 }
 
 .navbar ul {
     list-style: none;
     display: flex;
     gap: 15px;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    padding-bottom: 15px;
+}
+
+.navbar ul li {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
 }
 
 .navbar ul li a {
@@ -53,12 +93,35 @@ header {
     font-weight: bold;
 }
 
+.navbar .search-container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.navbar .search-container input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.navbar .search-container button {
+    background: #ffffff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 /* Main Layout */
 .container {
     display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
+    width: 100%;
+    margin: 50px auto;
     gap: 20px;
+    overflow: hidden; /* Ensure contents remain in viewport */
+    align-items: flex-start; /* Align items to the top */
 }
 
 .sidebar {
@@ -74,7 +137,6 @@ header {
 
 .right-sidebar {
     flex: 0 0 250px;
-    /* max-width: 250px; */
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -133,23 +195,6 @@ header {
     border-radius: 5px;
 }
 
-/* News Feed */
-.newsfeed {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.news-item {
-    display: flex;
-    align-items: center;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 .votes {
     display: flex;
     flex-direction: column;
@@ -176,14 +221,424 @@ header {
 }
 
 .votes .score {
-    font-size: 20px;
+    font-size: 12px;
     font-weight: bold;
     color: #333;
+}
+
+.votes-container {
+    display: grid;
+    grid-template-columns: auto auto auto; /* Adjust columns to fit content */
+    gap: 10px;
+    align-items: start;
+    background: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    width: fit-content; /* Ensure container does not extend beyond its contents */
+}
+
+.votes-container .left {
+    grid-column: 1 / 2; /* First column */
+    width: fit-content; /* Ensure container does not extend beyond its contents */
+    align-self: center;
+}
+
+.votes-container .right {
+    grid-column: 2 / 4; /* Span second and third columns */
+    display: flex;
+    flex-direction: column;
+    width: fit-content; /* Ensure container does not extend beyond its contents */
+    gap: 5px;
+}
+
+.votes-container .upvotes {
+    color: red;
+}
+
+.votes-container .downvotes {
+    color: blue;
+}
+
+.votes-container .points {
+    font-weight: bold;
+    color: #888;
 }
 
 .post-content h2 a {
     text-decoration: none;
     color: #0079d3;
+}
+
+/* Comments section */
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.comment .votes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.comment .votes .upvote, .comment .votes .downvote {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    cursor: pointer;
+}
+
+.comment .votes .upvote {
+    border-bottom: 8px solid #c6c6c6;
+    margin-bottom: 2px;
+}
+
+.comment .votes .downvote {
+    border-top: 8px solid #c6c6c6;
+    margin-top: 2px;
+}
+
+.comment .content {
+    flex: 1;
+}
+
+.comment .content .meta {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.comment .content .text {
+    margin-bottom: 5px;
+}
+
+.comment .content .actions {
+    font-size: 12px;
+    color: #0079d3;
+}
+
+.comment .content .actions a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #0079d3;
+}
+
+.comment .content .actions a:hover {
+    text-decoration: underline;
+}
+
+.comment .replies {
+    margin-left: 20px;
+    border-left: 2px solid #e0e0e0;
+    padding-left: 10px;
+}
+
+.comments-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.metadata-container {
+    background: #ececec;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.metadata-container .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.metadata-container .link {
+    color: #0079d3;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.metadata-container .votes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.metadata-container .votes .upvotes {
+    color: blue;
+}
+
+.metadata-container .votes .downvotes {
+    color: red;
+}
+
+.metadata-container .points {
+    font-weight: bold;
+    color: #888;
+}
+
+.metadata-container .submitted, .metadata-container .comments-count {
+    text-align: right;
+    font-size: 14px;
+    color: #888;
+}
+
+.metadata-container .comments-count a {
+    color: #0079d3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.metadata-container .comments-count a:hover {
+    text-decoration: underline;
+}
+
+/* News Feed */
+.newsfeed {
+    flex: 1;
+    background: #fff;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 0;
+    gap: 4px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-item:hover {
+    background-color: #f7f7f7;
+}
+
+.rank {
+    min-width: 20px;
+    text-align: right;
+    color: #c6c6c6;
+    font-size: 13px;
+    padding: 12px 4px 0 0;
+}
+
+.votes1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 3px;
+    padding-top: 8px;
+    min-width: 20px;
+}
+
+.votes1 .upvote, .votes1 .downvote {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    cursor: pointer;
+}
+
+.votes1 .upvote {
+    border-bottom: 8px solid #c6c6c6;
+    margin-bottom: 2px;
+}
+
+.votes1 .downvote {
+    border-top: 8px solid #c6c6c6;
+    margin-top: 2px;
+}
+
+.votes1 .score {
+    font-size: 12px;
+    font-weight: bold;
+    color: #c6c6c6;
+    margin: 1px 0;
+}
+
+.votes1-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+}
+
+.thumbnail {
+    width: 70px;
+    height: 50px;
+    margin: 0 3px;
+    background: #eee;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-content {
+    flex: 1;
+    padding-top: 5px;
+}
+
+.post-content h2 {
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 2px;
+    line-height: 1.2;
+}
+
+.post-content h2 a {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+.post-content h2 a:visited {
+    color: #551a8b;
+}
+
+.post-content .meta1 {
+    color: #888;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.meta1 a {
+    color: #888;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.meta1 a:hover {
+    text-decoration: underline;
+}
+
+.meta1 .separator {
+    margin: 0 4px;
+    color: #888;
+}
+
+#submitter {
+    color: #0000ff; 
+    font-weight: 300;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    margin-left: 42rem;
+}
+
+.pagination a {
+    padding: 3px 8px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #369;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #eef3f8;
+    border-right: 2px solid #336699;
+    width: 250px;
+    padding: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 5px 0;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #336699;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.sidebar a:hover {
+    background-color: #cee3f8;
+}
+
+.sidebar img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.ad {
+    width: 70px;
+    height: 50px;
+    margin: 0 3px;
+    background: #eee;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.more-button {
+    color: #8069d5;
+    background: none;
+    border: none;     
+    padding: 4px 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+
+.mini-container {
+    background-color: #cee3f8;
+    border: 1px solid #336699;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    margin-left: -20px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.mini-container p {
+    margin: 0;
+}
+
+.tiny-ad {
+    font-size: 10px;
+    color: #777;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.sidebar, .right-sidebar {
+    flex: 0 0 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 51, 102, 0.2);
+    align-self: stretch;
 }
 
 @media (max-width: 768px) {

@@ -9,27 +9,31 @@
 <body>
     <header>
         <div class="logo">reddit</div>
-        <div class="user-info">
-            <span>Welcome, user | <a href="#">logout</a></span>
-            <div class="counters">
-                <span>Messages: <a href="#">1 New Msg</a></span>
-                <span>Links: <a href="#">10</a></span>
-                <span>Comments: <a href="#">5</a></span>
-            </div>
-        </div>
     </header>
     
     <div class="navbar">
         <nav>
-            <ul>
-                <li><a href="#">what's hot</a></li>
-                <li><a href="#">new</a></li>
-                <li><a href="#">controversial</a></li>
-                <li><a href="#">top</a></li>
-                <li><a href="#">saved</a></li>
+            <ul  class="second-nav">
+            <li><a href="#" style="color: red;">what's hot</a></li>
+            <li><a href="#">new</a></li>
+            <li><a href="#">controversial</a></li>
+            <li><a href="#">top</a></li>
+            <li><a href="#">saved</a></li>
             </ul>
         </nav>
-    </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button>🔍</button>
+        </div>
+        <div class="user-info">
+            <span><a href="#">7hundredand77</a>, you're back! <a href="#">preferences</a> | <a href="#">logout?</a> :(</span>
+            <div class="counters">
+                <span><a href="#">📩 1 New Msg</a></span>
+                <span><a href="#">53,211 Link</a></span>
+                <span><a href="#">4,887 Comment</a></span>
+            </div>
+        </div>
+    </div>    
     
     <main class="container">
         <aside class="sidebar">
@@ -46,145 +50,608 @@
                 <li><a href="#"><img src="icon-placeholder.png" alt="Icon"> Web Design</a></li>
             </ul>
             </nav>
-            <button class="more-button">MORE</button>
+            <button class="more-button">( MORE )</button>
             <div class="mini-container blue">
             <p>Submit a link to anything interesting: news article, blog entry, video, picture...</p>
             </div>
             <div class="mini-container blue">
             <p>Create Community for your LARPing community.<br>...because nothing in life is free (except reddits!)</p>
             </div>
-            <img src="little-big-planet-placeholder.png" alt="Little Big Planet">
+            <img src="https://i.pinimg.com/736x/10/e1/6b/10e16b99f553f38f26df9b88696c0c29.jpg" alt="Little Big Planet" class="ad">
             <p class="tiny-ad">tiniest ad in the world</p>
         </aside>
         
         <section class="newsfeed">
-            <article class="news-item">
-                <div class="votes">
+            <div class="news-item">
+                <div class="rank">1</div>
+                <div class="votes1-container">
+                    <div class="votes1">
+                        <div class="upvote"></div>
+                        <div class="score">215</div>
+                        <div class="downvote"></div>
+                    </div>
+                </div>
+                <div class="thumbnail">
+                    <img src="https://cdn.prod.website-files.com/67ad5259c6e804a40b4bae92/67ad5259c6e804a40b4bba07_TV_CKY03_8DP02_00004_.jpg" alt="Thumbnail">
+                </div>
+                <div class="post-content">
+                    <h2><a href="#">What do you call 60 guys watching the Super Bowl at home?</a></h2>
+                    <p class="meta1">
+                        submitted 13 hours ago by <a id="submitter" href="#">krispykrackers</a>
+                        <span class="separator"></span><br>
+                        <a href="#">623 comments</a>
+                        <span class="separator"></span>
+                        <a href="#">share</a>
+                        <span class="separator"></span>
+                        <a href="#">save</a>
+                        <span class="separator"></span>
+                        <a href="#">hide</a>
+                        <span class="separator"></span>
+                        <a href="#">report</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="rank">2</div>
+                <div class="votes1-container">
+                    <div class="votes1">
+                        <div class="upvote"></div>
+                        <div class="score">232</div>
+                        <div class="downvote"></div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h2><a href="#">I AM the guy who created this design AMA</a></h2>
+                    <p class="meta1">
+                        submitted 13 hours ago by <a id="submitter" href="#">7hundredand77</a>
+                        <span class="separator"></span><br>
+                        <a href="#">288 comments</a>
+                        <span class="separator"></span>
+                        <a href="#">share</a>
+                        <span class="separator"></span>
+                        <a href="#">save</a>
+                        <span class="separator"></span>
+                        <a href="#">hide</a>
+                        <span class="separator"></span>
+                        <a href="#">report</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="rank">3</div>
+                <div class="votes1">
+                    <div class="upvote"></div>
+                    <div class="score">22</div>
+                    <div class="downvote"></div>
+                </div>
+                <div class="post-content">
+                    <h2><a href="#">Use this Chrome addon to block major third parties and search engines from tracking the webpages you go to and searches...</a></h2>
+                    <p class="meta1">
+                        submitted 15 hours ago by <a id="submitter" href="#">krispykrackers</a>
+                        <span class="separator"></span><br>
+                        <a href="#">288 comments</a>
+                        <span class="separator"></span>
+                        <a href="#">share</a>
+                        <span class="separator"></span>
+                        <a href="#">save</a>
+                        <span class="separator"></span>
+                        <a href="#">hide</a>
+                        <span class="separator"></span>
+                        <a href="#">report</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="rank">4</div>
+                <div class="votes1">
                     <div class="upvote"></div>
                     <div class="score">215</div>
                     <div class="downvote"></div>
                 </div>
-                <div class="post-content">
-                    <h2><a href="#">What do you call 60 guys watching the Super Bowl at home?</a></h2>
-                    <p>Submitted 19 hours ago by User</p>
-                </div>
-            </article>
-            <article class="news-item">
-                <div class="votes">
-                    <div class="upvote"></div>
-                    <div class="score">232</div>
-                    <div class="downvote"></div>
+                <div class="thumbnail">
+                    <img src="https://i.imgflip.com/3u04h5.jpg?a483840" alt="Thumbnail">
                 </div>
                 <div class="post-content">
-                    <h2><a href="#">I AM the guy who created this design AMA</a></h2>
-                    <p>Submitted 10 hours ago by Creator</p>
+                    <h2><a href="#">Thanks, Sally, That blowjob was... SFW</a></h2>
+                    <p class="meta1">
+                        submitted 11 hours ago by <a id="submitter" href="#">Maiko</a> to <a id="submitter" href="#">gaming</a>
+                        <span class="separator"></span><br>
+                        <a href="#">22 comments</a>
+                        <span class="separator"></span>
+                        <a href="#">share</a>
+                        <span class="separator"></span>
+                        <a href="#">save</a>
+                        <span class="separator"></span>
+                        <a href="#">hide</a>
+                        <span class="separator"></span>
+                        <a href="#">report</a>
+                    </p>
                 </div>
-            </article>
-            <article class="news-item">
-                <div class="votes">
+            </div>
+
+            <div class="news-item">
+                <div class="rank">5</div>
+                <div class="votes1">
                     <div class="upvote"></div>
-                    <div class="score">215</div>
+                    <div class="score">9215</div>
                     <div class="downvote"></div>
                 </div>
-                <div class="post-content">
-                    <h2><a href="#">What do you call 60 guys watching the Super Bowl at home?</a></h2>
-                    <p>Submitted 19 hours ago by Krispykrackers</p>
-                </div>
-            </article>
-            
-            <article class="news-item">
-                <div class="votes">
-                    <div class="upvote"></div>
-                    <div class="score">232</div>
-                    <div class="downvote"></div>
-                </div>
-                <div class="post-content">
-                    <h2><a href="#">I AM the guy who created this design AMA</a></h2>
-                    <p>Submitted 20 hours ago by 7hundredand77</p>
-                </div>
-            </article>
-            
-            <article class="news-item">
-                <div class="votes">
-                    <div class="upvote"></div>
-                    <div class="score">103</div>
-                    <div class="downvote"></div>
+                <div class="thumbnail">
+                    <img src="https://www.publishersweekly.com/images/data/ARTICLE_PHOTO/photo/000/078/78175-1.JPG" alt="Thumbnail">
                 </div>
                 <div class="post-content">
                     <h2><a href="#">As a six-year-old, this was the best book ever</a></h2>
-                    <p>Submitted 12 hours ago by Maiko to gaming</p>
+                    <p class="meta1">
+                        submitted 112 hours ago by <a id="submitter" href="#">Maiko</a> to <a id="submitter" href="#">gaming</a>
+                        <span class="separator"></span><br>
+                        <a href="#">6,232 comments</a>
+                        <span class="separator"></span>
+                        <a href="#">share</a>
+                        <span class="separator"></span>
+                        <a href="#">save</a>
+                        <span class="separator"></span>
+                        <a href="#">hide</a>
+                        <span class="separator"></span>
+                        <a href="#">report</a>
+                    </p>
                 </div>
-            </article>
-            
-            <article class="news-item">
-                <div class="votes">
-                    <div class="upvote"></div>
-                    <div class="score">215</div>
-                    <div class="downvote"></div>
-                </div>
-                <div class="post-content">
-                    <h2><a href="#">Use this Chrome addon to block major third parties and search engines</a></h2>
-                    <p>Submitted 19 hours ago by Krispykrackers</p>
-                </div>
-            </article>
-            
-            <article class="news-item">
-                <div class="votes">
+            </div>
+
+            <div class="news-item">
+                <div class="rank">6</div>
+                <div class="votes1">
                     <div class="upvote"></div>
                     <div class="score">215</div>
                     <div class="downvote"></div>
                 </div>
                 <div class="post-content">
                     <h2><a href="#">Thanks, Sally, That blowjob was... SFW</a></h2>
-                    <p>Submitted 11 hours ago by Maiko</p>
+                    <p class="meta1">
+                        submitted 11 hours ago by <a id="submitter" href="#">Maiko</a> to <a id="submitter" href="#">gaming</a>
+                        <span class="separator"></span><br>
+                        <a href="#">22 comments</a>
+                        <span class="separator"></span>
+                        <a href="#">share</a>
+                        <span class="separator"></span>
+                        <a href="#">save</a>
+                        <span class="separator"></span>
+                        <a href="#">hide</a>
+                        <span class="separator"></span>
+                        <a href="#">report</a>
+                    </p>
                 </div>
-            </article>
+            </div>
+
+            <div class="news-item">
+                <div class="rank">7</div>
+                <div class="votes1">
+                    <div class="upvote"></div>
+                    <div class="score">103</div>
+                    <div class="downvote"></div>
+                </div>
+                <div class="post-content">
+                    <h2><a href="#">As a six-year-old, this was the best book ever</a></h2>
+                    <p class="meta1">
+                        submitted 11 hours ago by <a id="submitter" href="#">Maiko</a> to <a id="submitter" href="#">gaming</a>
+                        <span class="separator"></span><br>
+                        <a href="#">22 comments</a>
+                        <span class="separator"></span>
+                        <a href="#">share</a>
+                        <span class="separator"></span>
+                        <a href="#">save</a>
+                        <span class="separator"></span>
+                        <a href="#">hide</a>
+                        <span class="separator"></span>
+                        <a href="#">report</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="rank">8</div>
+                <div class="votes1">
+                    <div class="upvote"></div>
+                    <div class="score">215</div>
+                    <div class="downvote"></div>
+                </div>
+                <div class="thumbnail">
+                    <img src="https://www.publishersweekly.com/images/data/ARTICLE_PHOTO/photo/000/078/78175-1.JPG" alt="Thumbnail">
+                </div>
+                <div class="post-content">
+                    <h2><a href="#">What do you call 60 guys watching the Super Bowl at home?</a></h2>
+                    <p class="meta1">
+                        submitted 13 hours ago by <a id="submitter" href="#">krispykrackers</a>
+                        <span class="separator"></span><br>
+                        <a href="#">623 comments</a>
+                        <span class="separator"></span>
+                        <a href="#">share</a>
+                        <span class="separator"></span>
+                        <a href="#">save</a>
+                        <span class="separator"></span>
+                        <a href="#">hide</a>
+                        <span class="separator"></span>
+                        <a href="#">report</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="rank">9</div>
+                <div class="votes1">
+                    <div class="upvote"></div>
+                    <div class="score">22</div>
+                    <div class="downvote"></div>
+                </div>
+                <div class="post-content">
+                    <h2><a href="#">Use this Chrome addon to block major third parties and search engines from tracking the webpages you go to and searches...</a></h2>
+                    <p class="meta1">
+                        submitted 15 hours ago by <a id="submitter" href="#">krispykrackers</a>
+                        <span class="separator"></span><br>
+                        <a href="#">288 comments</a>
+                        <span class="separator"></span>
+                        <a href="#">share</a>
+                        <span class="separator"></span>
+                        <a href="#">save</a>
+                        <span class="separator"></span>
+                        <a href="#">hide</a>
+                        <span class="separator"></span>
+                        <a href="#">report</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="rank">10</div>
+                <div class="votes1">
+                    <div class="upvote"></div>
+                    <div class="score">215</div>
+                    <div class="downvote"></div>
+                </div>
+                <div class="thumbnail">
+                    <img src="https://i.imgflip.com/3u04h5.jpg?a483840" alt="Thumbnail">
+                </div>
+                <div class="post-content">
+                    <h2><a href="#">Thanks, Sally, That blowjob was... SFW</a></h2>
+                    <p class="meta1">
+                        submitted 11 hours ago by <a id="submitter" href="#">Maiko</a> to <a id="submitter" href="#">gaming</a>
+                        <span class="separator"></span><br>
+                        <a href="#">22 comments</a>
+                        <span class="separator"></span>
+                        <a href="#">share</a>
+                        <span class="separator"></span>
+                        <a href="#">save</a>
+                        <span class="separator"></span>
+                        <a href="#">hide</a>
+                        <span class="separator"></span>
+                        <a href="#">report</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="rank">11</div>
+                <div class="votes1">
+                    <div class="upvote"></div>
+                    <div class="score">9215</div>
+                    <div class="downvote"></div>
+                </div>
+                <div class="thumbnail">
+                    <img src="https://www.publishersweekly.com/images/data/ARTICLE_PHOTO/photo/000/078/78175-1.JPG" alt="Thumbnail">
+                </div>
+                <div class="post-content">
+                    <h2><a href="#">As a six-year-old, this was the best book ever</a></h2>
+                    <p class="meta1">
+                        submitted 112 hours ago by <a id="submitter" href="#">Maiko</a> to <a id="submitter" href="#">gaming</a>
+                        <span class="separator"></span><br>
+                        <a href="#">6,232 comments</a>
+                        <span class="separator"></span>
+                        <a href="#">share</a>
+                        <span class="separator"></span>
+                        <a href="#">save</a>
+                        <span class="separator"></span>
+                        <a href="#">hide</a>
+                        <span class="separator"></span>
+                        <a href="#">report</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="rank">12</div>
+                <div class="votes1">
+                    <div class="upvote"></div>
+                    <div class="score">215</div>
+                    <div class="downvote"></div>
+                </div>
+                <div class="post-content">
+                    <h2><a href="#">Reddit, if you could go back to the beginning of high school having the experience you do now, what would you do differently leading up to this point in your life? (self.AskReddit)</a></h2>
+                    <p class="meta1">
+                        submitted 11 hours ago by <a id="submitter" href="#">Maiko</a> to <a id="submitter" href="#">gaming</a>
+                        <span class="separator"></span><br>
+                        <a href="#">22 comments</a>
+                        <span class="separator"></span>
+                        <a href="#">share</a>
+                        <span class="separator"></span>
+                        <a href="#">save</a>
+                        <span class="separator"></span>
+                        <a href="#">hide</a>
+                        <span class="separator"></span>
+                        <a href="#">report</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="rank">13</div>
+                <div class="votes1">
+                    <div class="upvote"></div>
+                    <div class="score">215</div>
+                    <div class="downvote"></div>
+                </div>
+                <div class="thumbnail">
+                    <img src="https://i.imgflip.com/3u04h5.jpg?a483840" alt="Thumbnail">
+                </div>
+                <div class="post-content">
+                    <h2><a href="#">Thanks, Sally, That blowjob was... SFW</a></h2>
+                    <p class="meta1">
+                        submitted 11 hours ago by <a id="submitter" href="#">Maiko</a> to <a id="submitter" href="#">gaming</a>
+                        <span class="separator"></span><br>
+                        <a href="#">22 comments</a>
+                        <span class="separator"></span>
+                        <a href="#">share</a>
+                        <span class="separator"></span>
+                        <a href="#">save</a>
+                        <span class="separator"></span>
+                        <a href="#">hide</a>
+                        <span class="separator"></span>
+                        <a href="#">report</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="rank">14</div>
+                <div class="votes1-container">
+                    <div class="votes1">
+                        <div class="upvote"></div>
+                        <div class="score">9215</div>
+                        <div class="downvote"></div>
+                    </div>
+                </div>
+                <div class="thumbnail">
+                    <img src="https://www.publishersweekly.com/images/data/ARTICLE_PHOTO/photo/000/078/78175-1.JPG" alt="Thumbnail">
+                </div>
+                <div class="post-content">
+                    <h2><a href="#">As a six-year-old, this was the best book ever</a></h2>
+                    <p class="meta1">
+                        submitted 112 hours ago by <a id="submitter" href="#">Maiko</a> to <a id="submitter" href="#">gaming</a>
+                        <span class="separator"></span><br>
+                        <a href="#">6,232 comments</a>
+                        <span class="separator"></span>
+                        <a href="#">share</a>
+                        <span class="separator"></span>
+                        <a href="#">save</a>
+                        <span class="separator"></span>
+                        <a href="#">hide</a>
+                        <span class="separator"></span>
+                        <a href="#">report</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="newer"><- NEWER</a>
+                <a href="#" class="older"> OLDER -></a>
+            </div>
         </section>
 
         <aside class="right-sidebar">
-            <h3>Comments</h3>
-            <ul class="comment-list">
-            <li>
-                <strong>UserNumber42:</strong> Wow, the first Reddit redesign I've seen that doesn’t suck, and I’ve been on this site for 4 years. Very functional.
-                <ul>
-                <li>
-                    <strong>7hundredand77:</strong> Ha, yeah, since I know many people use widescreen monitors these days, this could make use of space a lot more effectively.
-                    <ul>
-                    <li>
-                        <strong>aliasforspam:</strong> This looks like an email client. Brilliant!
-                        <ul>
-                        <li>
-                            <strong>Deterministic:</strong> It’s funny that you mention email, because it looks ever-so-vaguely like Google Wave.
-                        </li>
-                        </ul>
+            <div class="metadata-container left">
+                <a href="http://img3.imageshack.us/img3/9807/goodlookingnew23.jpg" class="link title">IAM the guy who created this design AMA (i.imgur.com)</a>
+                <a>http://img3.imageshack.us/img3/9807/goodlookingnew23.jpg</a>
+                <div class="votes-container">
+                    <div class="points left"><strong style="font-size: larger;">232</strong> <strong style="font-size: smaller;">points</strong> <span style="font-size: smaller;">(71% like it)</span></div>
+                    <div class="right">
+                        <div class="upvotes" style="font-size: smaller;">390 up votes</div>
+                        <div class="downvotes" style="font-size: smaller;">158 down votes</div>
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="submitted">submitted on 01 Feb 2011</div>
+                    <div class="comments-count"><a href="#" style="color: #0079d3; text-decoration: none; cursor: pointer;">200 comments</a>&emsp;<a href="#" style="color: #0079d3; text-decoration: none; cursor: pointer;">sort by</a></div>
+                </div>
+            </div>
+            <div class="comments-container">
+                <ul class="comment-list">
+                    <li class="comment">
+                        <div class="votes">
+                            <div class="upvote"></div>
+                            <div class="score">47</div>
+                            <div class="downvote"></div>
+                        </div>
+                        <div class="content">
+                            <div class="meta">
+                                <strong>UserNumber42</strong> 21 hours ago [-]
+                            </div>
+                            <div class="text">
+                                Wow, the first Reddit redesign I've seen that doesn't suck, and I've been on this site for 4 years now (different accounts). Very functional. With wide screen monitors this could be very cool. Only suggestion is to have lower the width of the scores column for each post and the subreddit side bar so there is more room for the content.
+                            </div>
+                            <div class="actions">
+                                <a href="#">permalink</a>
+                                <a href="#">report</a>
+                                <a href="#">reply</a>
+                            </div>
+                            <ul class="replies">
+                                <li class="comment">
+                                    <div class="votes">
+                                        <div class="upvote"></div>
+                                        <div class="score">14</div>
+                                        <div class="downvote"></div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="meta">
+                                            <strong>7hundredand77 [S]</strong> 20 hours ago [-]
+                                        </div>
+                                        <div class="text">
+                                            Ha, yeah, since I know many people use widescreen monitors these days, this could make use of space a lot more effectively. A sweet spot with columns needs to be found where there is enough space to view everything perfectly. Since I just quickly put this one together, I didn't really spend much time finding that right balance.
+                                        </div>
+                                        <div class="actions">
+                                            <a href="#">permalink</a>
+                                            <a href="#">parent</a>
+                                            <a href="#">edit</a>
+                                            <a href="#">delete</a>
+                                            <a href="#">reply</a>
+                                        </div>
+                                        <ul class="replies">
+                                            <li class="comment">
+                                                <div class="votes">
+                                                    <div class="upvote"></div>
+                                                    <div class="score">7</div>
+                                                    <div class="downvote"></div>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="meta">
+                                                        <strong>aliasforspam</strong> 15 hours ago [-]
+                                                    </div>
+                                                    <div class="text">
+                                                        This looks like an email client. Brilliant! ...I never realized how much Reddit is like reading email until now. I guess we could view things in brackets much like forwards from the uncle you otherwise don't communicate with. DAE blah blah = FWD: FWD: Fwd: You gotta read this!
+                                                    </div>
+                                                    <div class="actions">
+                                                        <a href="#">permalink</a>
+                                                        <a href="#">parent</a>
+                                                        <a href="#">report</a>
+                                                        <a href="#">reply</a>
+                                                    </div>
+                                                    <ul class="replies">
+                                                        <li class="comment">
+                                                            <div class="votes">
+                                                                <div class="upvote"></div>
+                                                                <div class="score">4</div>
+                                                                <div class="downvote"></div>
+                                                            </div>
+                                                            <div class="content">
+                                                                <div class="meta">
+                                                                    <strong>Deterministic</strong> 11 hours ago [-]
+                                                                </div>
+                                                                <div class="text">
+                                                                    It's funny that your mention email, because it looks ever-so-vaguely like Google Wave, except that instead of Menu | Inboxes | Emails, it's Subreddits | Topics | Comments Nevertheless, it's an interesting concept for a redesign a bit shinier, but still maintaining the minimalistic design.
+                                                                </div>
+                                                                <div class="actions">
+                                                                    <a href="#">permalink</a>
+                                                                    <a href="#">parent</a>
+                                                                    <a href="#">report</a>
+                                                                    <a href="#">reply</a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="comment">
+                                    <div class="votes">
+                                        <div class="upvote"></div>
+                                        <div class="score">3</div>
+                                        <div class="downvote"></div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="meta">
+                                            <strong>volve</strong> 10 hours ago [-]
+                                        </div>
+                                        <div class="text">
+                                            Except, lets be honest; I only rarely maximize windows on my 24" monitors, almost never for something like passive entertainment such as Reddit. I personally feel a lot of these "wide-screen optimized" designs miss the point that they aren't likely the sole activity on said widescreen... (But it is a very nice design!)
+                                        </div>
+                                        <div class="actions">
+                                            <a href="#">permalink</a>
+                                            <a href="#">parent</a>
+                                            <a href="#">report</a>
+                                            <a href="#">reply</a>
+                                        </div>
+                                        <ul class="replies">
+                                            <li class="comment">
+                                                <div class="votes">
+                                                    <div class="upvote"></div>
+                                                    <div class="score">2</div>
+                                                    <div class="downvote"></div>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="meta">
+                                                        <strong>freshwire</strong> 9 hours ago [-]
+                                                    </div>
+                                                    <div class="text">
+                                                        You could have it that the column width can be changed (by just dragging around).
+                                                    </div>
+                                                    <div class="actions">
+                                                        <a href="#">permalink</a>
+                                                        <a href="#">parent</a>
+                                                        <a href="#">report</a>
+                                                        <a href="#">reply</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="comment">
+                                    <div class="votes">
+                                        <div class="upvote"></div>
+                                        <div class="score">3</div>
+                                        <div class="downvote"></div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="meta">
+                                            <strong>gusthebus</strong> 15 hours ago [-]
+                                        </div>
+                                        <div class="text">
+                                            I agree. Additionally, it wouldn't be difficult to provide a button to toggle from the current layout, to the OP's design. That would be a simple JavaScript to change out the page CSS. The dev team could take it one step farther and cache the user's UI choice.
+                                        </div>
+                                        <div class="actions">
+                                            <a href="#">permalink</a>
+                                            <a href="#">parent</a>
+                                            <a href="#">report</a>
+                                            <a href="#">reply</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>volve:</strong> Except, let’s be honest; I only rarely maximize windows on my 24” monitors.
-                    <ul>
-                    <li>
-                        <strong>reshwire:</strong> You could have it that the column width can be changed (by just dragging around).
+                    <li class="comment">
+                        <div class="votes">
+                            <div class="upvote"></div>
+                            <div class="score">7</div>
+                            <div class="downvote"></div>
+                        </div>
+                        <div class="content">
+                            <div class="meta">
+                                <strong>7hundredand77 [S]</strong> 14 hours ago* [-]
+                            </div>
+                            <div class="text">
+                                I am going update the design tonight. There have been a lot of responses and feedback on what needs to be done:
+                                <ul>
+                                    <li>Orange Icon for new messages</li>
+                                    <li>A more reddit styled colour theme rather than the white grey</li>
+                                    <li>Update column widths</li>
+                                    <li>Allow dynamic sized story lengths</li>
+                                </ul>
+                            </div>
+                            <div class="actions">
+                                <a href="#">permalink</a>
+                                <a href="#">parent</a>
+                                <a href="#">edit</a>
+                                <a href="#">delete</a>
+                                <a href="#">reply</a>
+                            </div>
+                        </div>
                     </li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>gusthebus:</strong> I agree. Additionally, it wouldn’t be difficult to provide a button to toggle from the current layout to the OP’s design.
-                </li>
                 </ul>
-            </li>
-            <li>
-                <strong>7hundredand77:</strong> I am going to update the design tonight. There have been a lot of responses and feedback on what needs to be done:
-                <ul>
-                <li>Orange text for new messages</li>
-                <li>More Reddit-styled theme rather than the white grey</li>
-                <li>Update column width</li>
-                <li>Allow dynamic sized story lengths</li>
-                </ul>
-            </li>
-            </ul>
+            </div>
         </aside>
-
     </main>
 </body>
 </html>
