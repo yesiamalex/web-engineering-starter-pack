@@ -1,0 +1,134 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Layout */
+.news-container {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px;
+    gap: 20px;
+}
+
+.newsfeed {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Article Cards */
+.news-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.news-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.news-content {
+    padding: 15px;
+}
+
+.news-content h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+}
+
+.date {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.news-content p {
+    margin: 10px 0;
+    color: #333;
+}
+
+.news-content a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.news-content a:hover {
+    color: #0056b3;
+}
+
+/* Sidebar */
+.sidebar h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .news-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        order: -1;
+    }
+}
