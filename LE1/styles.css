@@ -1,65 +1,78 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+/* Ziedell Figueroa and Erl Montano */
+/* CMSC 126 - C LE 1 */
+/* March 15, 2025 */
+
+/* Import Google Font Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
 /* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #333;
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #003366; /* Navy Blue */
+    color: #ffffff;
     text-align: center;
     padding: 20px 0;
     width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 51, 102, 0.3); /* Adjusted shadow color */
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 h1 {
     margin: 0;
+    font-size: 2.5em;
 }
 
 /* Layout */
 .news-container {
     display: flex;
+    flex-direction: row;
     max-width: 800px;
     width: 100%;
     margin: 20px;
     gap: 20px;
 }
 
+.sidebar {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 51, 102, 0.2); /* Adjusted shadow color */
+    min-width: 250px;
+    order: -1;
+}
+
 .newsfeed {
-    flex: 2;
+    flex: 3;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.sidebar {
-    flex: 1;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 /* Article Cards */
 .news-card {
-    background: white;
+    background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 51, 102, 0.25); /* Adjusted shadow color */
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .news-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 14px 28px rgba(0, 51, 102, 0.35); /* Adjusted shadow color */
 }
 
 .news-card img {
@@ -69,39 +82,42 @@ h1 {
 }
 
 .news-content {
-    padding: 15px;
+    padding: 20px;
 }
 
 .news-content h2 {
     margin: 0 0 10px;
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 
 .date {
-    color: #777;
+    color: #666666; /* Dark Gray */
     font-size: 0.9em;
 }
 
 .news-content p {
     margin: 10px 0;
-    color: #333;
+    color: #555;
+    font-size: 1em;
 }
 
 .news-content a {
     text-decoration: none;
-    color: #007bff;
+    color: #0052a5; /* Navy Blue */
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .news-content a:hover {
-    color: #0056b3;
+    color: #001c38; /* Darker Navy Blue */
 }
 
 /* Sidebar */
 .sidebar h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    border-bottom: 1.5px solid #ccc;
+    padding-bottom: 15px;
 }
 
 .sidebar ul {
@@ -110,25 +126,38 @@ h1 {
 }
 
 .sidebar li {
-    margin: 10px 0;
+    margin: 12px 0;
 }
 
 .sidebar a {
     text-decoration: none;
-    color: #333;
+    color: #0052a5; /* Navy Blue */
     transition: color 0.3s ease;
+    font-weight: bold;
 }
 
 .sidebar a:hover {
-    color: #007bff;
+    color: #001c38; /* Darker Navy Blue */
 }
 
 /* Responsive Design */
+@media (max-width: 800px) {
+    .news-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sidebar {
+        order: 2;
+        width: 100%;
+    }
+}
+
 @media (max-width: 600px) {
     .news-container {
         flex-direction: column;
     }
     .sidebar {
-        order: -1;
+        order: 2;
+        width: 100%;
     }
 }
