@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziedell Alexander - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Ziedell Alexander C. Figueroa</h1>
+        <p>Computer Engineering Student | Problem Solver | Research Enthusiast</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="#about" data-section="about">About Me</a>
+        <a href="#skills" data-section="skills">Skills</a>
+        <a href="#projects" data-section="projects">Projects</a>
+        <a href="#contact" data-section="contact">Contact</a>
+        <div class="navbar-highlight"></div>
+    </nav>
+
+    <main>
+        <section id="about" class="about section">
+            <h2>About Me</h2>
+            <p>I am a passionate Computer Engineering student with a strong interest in problem-solving, academic research, and technology. I enjoy exploring innovative solutions and collaborating on impactful projects.</p>
+        </section>
+        <section id="skills" class="skills section">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <span><i class="fas fa-brain"></i>Problem-Solving</span>
+                <span><i class="fas fa-pen-alt"></i>Academic Writing</span>
+                <span><i class="fas fa-image"></i>Adobe InDesign & Photoshop</span>
+                <span><i class="fas fa-cloud"></i>GSuite & Cloud Applications</span>
+                <span><i class="fas fa-tools"></i>Software & Hardware Troubleshooting</span>
+            </div>
+        </section>
+        <section id="projects" class="projects section">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Interactive Campus Map</h3>
+                <p>A Django-based web app for campus navigation and service finding.</p>
+            </div>
+            <div class="project">
+                <h3>Book Layout & Design</h3>
+                <p>Professional book design and layout using Adobe InDesign.</p>
+            </div>
+            <div class="project">
+                <h3>Code Complexity Analysis Tool</h3>
+                <p>A Python-based tool for evaluating algorithmic complexity in C++ code.</p>
+            </div>
+        </section>
+        <section id="contact" class="contact section">
+            <h2>Contact</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required style="font-family: inherit;">
+                <input type="email" placeholder="Your Email" required style="font-family: inherit;">
+                <textarea placeholder="Your Message" required style="font-family: inherit;"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".navbar a");
+        const highlight = document.querySelector(".navbar-highlight");
+        const sections = document.querySelectorAll(".section");
+
+        function updateHighlight(link) {
+            highlight.style.width = `${link.offsetWidth}px`;
+            highlight.style.left = `${link.offsetLeft}px`;
+            highlight.style.opacity = "1";
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                const targetSection = document.getElementById(this.getAttribute("data-section"));
+
+                // Remove active class from all links and sections
+                navLinks.forEach(nav => nav.classList.remove("active"));
+                sections.forEach(section => section.classList.remove("active"));
+
+                // Add active class to clicked link and its section
+                this.classList.add("active");
+                targetSection.classList.add("active");
+
+                // Update highlight position
+                updateHighlight(this);
+
+                // Scroll to section smoothly
+                targetSection.scrollIntoView({ behavior: "smooth" });
+            });
+
+            // Ensure highlight is placed correctly on page load
+            if (link.classList.contains("active")) {
+                updateHighlight(link);
+            }
+        });
+
+        // Set highlight on page load if there's an active link
+        const activeLink = document.querySelector(".navbar a.active");
+        if (activeLink) updateHighlight(activeLink);
+    });
+    </script>
+</body>
+</html>
