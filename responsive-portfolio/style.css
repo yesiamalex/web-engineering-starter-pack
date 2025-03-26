@@ -52,6 +52,24 @@
     opacity: 0;
 }
 
+/* Underline effect on hover and selection */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background: #ffcc00;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.navbar a:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
 .navbar a.active {
     color: #ffcc00;
 }
