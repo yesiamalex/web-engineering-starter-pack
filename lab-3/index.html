@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Pathfinding Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Advanced Pathfinding Visualizer</h1>
+
+        <h2>by Alex F.</h2>
+        
+        <div class="controls">
+            <div class="control-group">
+                <h3>Algorithm</h3>
+                <select id="algorithm-select">
+                    <option value="dijkstra">Dijkstra's Algorithm</option>
+                    <option value="astar">A* Search</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <h3>Grid Size</h3>
+                <select id="grid-size">
+                    <option value="10">10×10</option>
+                    <option value="15">15×15</option>
+                    <option value="20">20×20</option>
+                    <option value="25">25×25</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <h3>Speed</h3>
+                <select id="speed">
+                    <option value="50">Slow</option>
+                    <option value="20">Medium</option>
+                    <option value="5">Fast</option>
+                    <option value="0">Instant</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <h3>Actions</h3>
+                <div class="button-group">
+                    <button id="start-btn" class="btn-success">Set Start</button>
+                    <button id="end-btn" class="btn-danger">Set End</button>
+                    <button id="wall-btn" class="btn-primary">Add Walls</button>
+                    <button id="weight-btn" class="btn-warning">Add Weight</button>
+                    <button id="clear-btn" class="btn-primary">Clear Walls</button>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <h3>Pathfinding</h3>
+                <div class="button-group">
+                    <button id="find-path-btn" class="btn-success">Find Path</button>
+                    <button id="reset-btn" class="btn-primary">Reset Grid</button>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <h3>Save/Load</h3>
+                <div class="button-group">
+                    <button id="save-btn" class="btn-primary">Save Grid</button>
+                    <button id="load-btn" class="btn-primary">Load Grid</button>
+                    <button id="clear-save-btn" class="btn-danger">Clear Saved</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-container">
+            <h3>Pathfinding Stats</h3>
+            <div class="stat-item">
+                <span class="stat-name">Status:</span>
+                <span id="status-message" class="stat-value">Ready</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-name">Algorithm:</span>
+                <span id="algorithm-name" class="stat-value">Dijkstra's</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-name">Grid Size:</span>
+                <span id="grid-dimensions" class="stat-value">10×10</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-name">Start Position:</span>
+                <span id="start-position" class="stat-value">Not set</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-name">End Position:</span>
+                <span id="end-position" class="stat-value">Not set</span>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid" id="grid"></div>
+        </div>
+    </div>
+
+    <!-- Message Overlay -->
+    <div class="message-overlay" id="message-overlay">
+        <div class="message-box">
+            <h3 id="message-title">Message</h3>
+            <p id="message-content">Message content goes here</p>
+            <button id="message-close" class="btn-primary">OK</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
