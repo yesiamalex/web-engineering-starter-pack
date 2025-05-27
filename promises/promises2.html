@@ -1,0 +1,10 @@
+<script>
+    window.addEventListener('pointermove', (event) => {
+        const container = document.querySelector('#data');
+
+        container.innerText = `${event.clientX} • ${event.clientY}`;
+    });
+</script>
+<body>
+    <div id="data"></div>
+</body>

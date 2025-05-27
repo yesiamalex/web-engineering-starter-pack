@@ -1,0 +1,12 @@
+<script>
+    function askForName() {
+        const name = window.prompt('What is your name?');
+        console.log('hello!');
+
+        const elem = document.querySelector('#greeting');
+        elem.innerText = `Hi ${name}!`;
+    }
+</script>
+<h1>Week 8: Promises!</h1>
+<button onclick="askForName()">Click me</button>
+<div id="greeting"></div>
