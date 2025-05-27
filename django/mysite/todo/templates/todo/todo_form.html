@@ -1,0 +1,10 @@
+{% extends 'todo/base.html' %}
+{% block title %}{{ view.object.pk|yesno:"Edit Todo, Add Todo"}}{% endblock %}
+{% block content %}
+    <form method="post" class="bg-white p-6 shadow rounded">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="bg-green-500 text-white px-4 py-2">Save</button>
+        <a href="{% url 'todo:todo_list' %}" class="ml-4 text-gray-500">Cancel</a>
+    </form>
+{% endblock %}
